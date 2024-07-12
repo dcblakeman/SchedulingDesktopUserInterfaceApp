@@ -40,6 +40,7 @@
       <HintPath>packages\Xam.Plugin.Geolocator.4.5.0.6\lib\netstandard2.0\Plugin.Geolocator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Device" />
     <Reference Include="System.Xml.Linq" />
@@ -61,16 +62,34 @@
     </Compile>
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Language.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\GetLocation.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Placeholder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Placeholder.Designer.cs">
+      <DependentUpon>Placeholder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LoginVerification.en.resx">
+      <DependentUpon>LoginVerification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginVerification.es.resx">
+      <DependentUpon>LoginVerification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginVerification.resx">
       <DependentUpon>LoginVerification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Placeholder.resx">
+      <DependentUpon>Placeholder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
